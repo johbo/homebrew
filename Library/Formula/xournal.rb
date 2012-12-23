@@ -4,12 +4,14 @@ require 'formula'
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 
 class Xournal < Formula
-  homepage ''
+  homepage 'http://xournal.sourceforge.net'
   url 'http://downloads.sourceforge.net/xournal/xournal-0.4.7.tar.gz'
   version '0.4.7'
   sha1 'd2556bf21bef2df99bef0a6d1cb251d5e0f12d3f'
 
-  # depends_on 'cmake' => :build
+  depends_on 'pkg-config' => :build
+  depends_on 'libgnomecanvas'
+  depends_on 'poppler' # TODO: with glib ?? how?
   depends_on :x11 # if your formula requires any X11/XQuartz components
 
   def install
