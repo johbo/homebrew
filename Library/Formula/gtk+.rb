@@ -35,7 +35,8 @@ class Gtkx < Formula
                           "--prefix=#{prefix}",
                           "--disable-glibtest",
                           "--enable-introspection=yes",
-                          "--disable-visibility"
+                          "--disable-visibility",
+                          "--with-xinput=yes"
     system "make install"
   end
 end
